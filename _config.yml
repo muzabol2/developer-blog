@@ -1,9 +1,9 @@
-title: Developer Blog - from juniora to senior
+title: Developer Blog - from junior to senior
 email: bolekbilly@o2.pl
 description: >- # this means to ignore newlines until "baseurl:"
-  I will share here what I am learning at the moment, what challenges lie ahead of me,
-  what I would like to achieve in the near future and probably also some thoughts.
-  We'll see. Happy reading!
+  I will share here what I am currently working on - what challenges lie ahead of me,
+  what I would like to achieve in the near future and probably also some other thoughts.
+  We'll see yet. Happy reading!
 baseurl: "developer-blog" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb

@@ -1,0 +1,72 @@
+---
+layout: post
+title:  "Learn GitHub Pages"
+permalink: "/learn-github-pages"
+---
+
+Recently I've been learning [Jekyll][jekyll]{:target="\_blank"} and [GitHub Pages][github-pages]{:target="\_blank"}.
+
+[Here][tutorial]{:target="\_blank"} is a good YouTube tutorial that I watched to learn GitHub Pages.
+
+My short version of this tutorial:
+1. Install [Ruby][ruby]{:target="\_blank"}. Open it up - you will see the terminal. Run everything by choosing options 1, 2, 3.
+1. Install Jekyll. Go to your terminal and type:
+```console
+gem install jekyll bundler
+```
+1. Create your site. Go to your location and type:
+```console
+jekyll new blog_name
+```
+1. Go to newly created directory (*cd blog_name*) and start the page on localhost:
+```console
+bundle exec jekyll serve
+```
+Your site should open on *localhost:4000*.
+1. To add new post. First open VSCode. Under *_posts* you will see *default-jekyll-post*. You can and here your new one. Remember to keep the date structure in the file name (*year-month-day-post-name-here.md*) and also keep the part on the top of the page. This one:
+```console
+---
+layout: post
+title:  "Default Jekyll Post"
+permalink: "/default-jekyll-post"
+---
+```
+Of course, change the title and permlink. You don't have to have this permlink, but I think it looks better with it.
+1. Work on your post. Inside the file use [Markdown][markdown]{:target="\_blank"}.
+1. When you finish you want to host your page on Github Pages. YouTube tutorial is [here][host_gh]{:target="\_blank"}. Here is my short version:
+- create new repository on GitHub.com, for example *gh_blog*
+- then in file *copnfig.yml change variable *baseurl* to *"gh_blog"*
+- save all files and then work in terminal with git:
+
+```console
+git init
+git switch -c gh-pages
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/**USER_NAME**/gh_blog.git
+git push origin gh-pages
+```
+- Next time you change something and want to push your changes you only need this commands:
+
+```console
+git add .
+git commit -m "Name of your commit"
+git push origin gh-pages
+```
+
+- If you want to see your changes locally you might need to remove from *copnfig.yml this variable *baseurl* and in terminal just type:
+
+```console
+jekyll serve
+```
+Remember to put this *baseurl* back when you push your changes later.
+
+That's all you need to now to start your journey with GitHub Pages. Good luck!
+
+
+[jekyll]: https://jekyllrb.com/
+[github-pages]: https://pages.github.com/
+[tutorial]: https://youtube.com/playlist?list=PLLAZ4kZ9dFpOPV5C5Ay0pHaa0RJFhcmcB
+[ruby]: https://rubyinstaller.org/downloads/
+[markdown]: https://www.markdownguide.org/basic-syntax/
+[host_gh]: https://youtu.be/fqFjuX4VZmU

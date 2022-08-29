@@ -11,11 +11,13 @@ List of GIT commands that I use a lot:
 
 GIT Command  | Description
 ------------- | -------------
-git init | initialize an existing directory as a Git repository
 git clone *urlPath* | retrieve an entire repository from a hosted location via URL
+git init | initialize an existing directory as a Git repository
 git status  | show modified files in working directory, staged for your next commit
-git add .  | add all files as they look now to your next commit (stage) 
+git add .  | add all files as they look now to your next commit (stage)
+git reset  | revert adding changes
 git commit -m "*description*" | commit your staged content as a new commit snapshot
+git reset HEAD~1 | revert last commit
 git pull  | fetch and merge any commits from the tracking remote branch
 git push  | transmit local branch commits to the remote repository branch
 git push -u origin *branchName* | if your branch is newly created, you need to upload the branch
